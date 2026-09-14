@@ -1,10 +1,14 @@
 #include <stdio.h>
 
-void somaVetor(int v[], int tamanho, int *resultado)
+void maiorValor(int v[], int tamanho, int *resultado)
 {
+    int valorAnterior = v;
     for (int i = 0; i < tamanho; i++)
     {
-        *resultado += *(v + i);
+        if (valorAnterior < *(v + i))
+        {
+            *resultado = *(v + i);
+        }
     }
 }
 
