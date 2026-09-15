@@ -2,10 +2,10 @@
 
 void maiorValor(int v[], int tamanho, int *resultado)
 {
-    int valorAnterior = v;
+    *resultado = *(v + 0);
     for (int i = 0; i < tamanho; i++)
     {
-        if (valorAnterior < *(v + i))
+        if (*resultado < *(v + i))
         {
             *resultado = *(v + i);
         }
@@ -14,11 +14,10 @@ void maiorValor(int v[], int tamanho, int *resultado)
 
 int main()
 {
-    int v[4] = {1, 2, 3, 4};
+    int v[4] = {1, 5, 3, 4};
     int r;
 
-    somaVetor(v, 4, &r);
+    maiorValor(v, 4, &r);
     printf("Resultado: %d\n", r);
 
-    // r = 10
 }
