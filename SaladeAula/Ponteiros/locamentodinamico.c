@@ -8,18 +8,20 @@ void dobra(int *x){
 int main()
 {
     int i = 20;
-    int *p = malloc(4);
-    //int *p = malloc(sizeof *p);
+    //int *p = malloc(4); //Valor de bytes de um inteiro
+    int *p = malloc(sizeof *p);
 
     *p = 50;
-
-    printf("%d", *p);
-
     
     
-    printf("%d", i);
+    /*printf("%d\n", i);
     dobra(&i);
-    printf("%d", i);
+    printf("%d\n", i);*/
+
+    printf("%d\n", *p);
+    dobra(p); //Endereço onde foi salvo o malloc
+    printf("%d\n", *p);
+
 
     return 0;
 }
